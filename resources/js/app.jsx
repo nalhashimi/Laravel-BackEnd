@@ -1,6 +1,5 @@
-import { createInertiaApp } from '@inertiajs/react'
-import { createRoot } from 'react-dom/client'
-import './bootstrap'
+import { createInertiaApp } from '@inertiajs/react';
+import { createRoot } from 'react-dom/client';
 
 createInertiaApp({
     resolve: name => {
@@ -10,4 +9,4 @@ createInertiaApp({
     setup({ el, App, props }) {
         createRoot(el).render(<App {...props} />)
     },
-}).then().catch(e => console.error(e))
+}).then(res => {console.log("LOG:", res)}).catch(e => console.error("ERROR:",e))
